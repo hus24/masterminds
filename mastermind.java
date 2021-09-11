@@ -74,8 +74,8 @@ public class mastermind {
 			//System.out.println(sum);
 			guess++;
 			
-			System.out.println();
-			System.out.print("you have "+sumed+" correct positions and "+sum+" correct numbers");
+			
+			System.out.println("you have "+sumed+" correct positions and "+sum+" correct numbers");
 			if (sum==3 && sumed==3 ) {
 				System.out.println("you have solved the puzzle in "+guess+" guesses");
 			}
