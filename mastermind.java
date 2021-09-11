@@ -88,8 +88,9 @@ public class mastermind {
 			
 			System.out.println("you have "+sumed+" correct positions and "+sum+" correct numbers");
 			if (sum==3 && sumed==3 ) {
-				guess=1;
+				
 				System.out.println("you have solved the puzzle in "+guess+" guesses");
+				guess=1;
 				System.out.println("Would you like to play again? 1 for yes and no for 0 ");
 				Scanner inpu = new Scanner(System.in);
 				int fin= input.nextInt();
