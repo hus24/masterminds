@@ -25,7 +25,7 @@ public class mastermind {
 			Scanner inputs = new Scanner(System.in);
 			int thirdNum= input.nextInt();
 			
-			//System.out.println(realnumone+ " "+realnumtwo+" "+ realnumthree );
+			System.out.println(realnumone+ " "+realnumtwo+" "+ realnumthree );
 			int position =0;
 			int positioned = 0;
 			int positions = 0;
@@ -40,7 +40,9 @@ public class mastermind {
 			aList.add(realnumthree);
 			if (bList.get(0)==aList.get(0)) {
 				
-			
+			//if (realnumthree==firstNum || realnumthree==secNum || realnumthree==thirdNum || realnumtwo == firstNum || realnumtwo==secNum || realnumtwo==thirdNum || realnumone == firstNum || realnumone== secNum|| realnumone == thirdNum) {
+				position=1; 
+			}
 			if (bList.get(1)==aList.get(1)) {
 				positions=1;
 			}
@@ -55,7 +57,7 @@ public class mastermind {
 			int counted =0;
 			
 			
-			
+			//System.out.println(aList);
 			if(aList.contains(firstNum)) {
 				count=1;
 			}
@@ -65,7 +67,16 @@ public class mastermind {
 			if(aList.contains((thirdNum))) {
 				counted=1;
 			}
-			
+			//int sum = count+counts+counted+doublecount;
+			//if (realnumthree==firstNum || realnumthree==secNum || realnumthree==thirdNum) {
+				//count=1;
+			//}
+			//if (realnumtwo == firstNum || realnumtwo==secNum || realnumtwo==thirdNum) {
+				//counts=1;
+			//}
+			//if (realnumone == firstNum || realnumone== secNum|| realnumone == thirdNum) {
+				//counted=1;
+			//}
 			if (guess==4) {
 				System.out.println("you have one more guess remaining!! Use it wisely. ");
 			}
@@ -77,20 +88,35 @@ public class mastermind {
 			
 			System.out.println("you have "+sumed+" correct positions and "+sum+" correct numbers");
 			if (sum==3 && sumed==3 ) {
+				guess=1;
 				System.out.println("you have solved the puzzle in "+guess+" guesses");
+				System.out.println("Would you like to play again? 1 for yes and no for 0 ");
+				Scanner inpu = new Scanner(System.in);
+				int fin= input.nextInt();
+				if (fin==1) {
+					guess=1;
+					
+				}
+				
+				if (fin==0) {
+					guess=0;
+					System.out.println("thanks for playing!");
+				}
 			}
+			
 			if (guess==6) {
 				guess=0;
 				System.out.println();
 				System.out.println("you lost potato head. Here were the real numbers: " +realnumone+ " "+realnumtwo+" "+ realnumthree );
-			System.out.println();
+			
 			System.out.println("Would you like to play again? 1 for yes and no for 0 ");
 			Scanner inpu = new Scanner(System.in);
 			int fin= input.nextInt();
-			
 			if (fin==1) {
 				guess=1;
+				
 			}
+			
 			if (fin==0) {
 				guess=0;
 				System.out.println("thanks for playing!");
@@ -105,5 +131,3 @@ public class mastermind {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-}
