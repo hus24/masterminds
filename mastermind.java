@@ -39,8 +39,7 @@ public class mastermind {
 			aList.add(realnumtwo);
 			aList.add(realnumthree);
 			if (bList.get(0)==aList.get(0)) {
-				
-			//if (realnumthree==firstNum || realnumthree==secNum || realnumthree==thirdNum || realnumtwo == firstNum || realnumtwo==secNum || realnumtwo==thirdNum || realnumone == firstNum || realnumone== secNum|| realnumone == thirdNum) {
+			
 				position=1; 
 			}
 			if (bList.get(1)==aList.get(1)) {
@@ -67,28 +66,18 @@ public class mastermind {
 			if(aList.contains((thirdNum))) {
 				counted=1;
 			}
-			//int sum = count+counts+counted+doublecount;
-			//if (realnumthree==firstNum || realnumthree==secNum || realnumthree==thirdNum) {
-				//count=1;
-			//}
-			//if (realnumtwo == firstNum || realnumtwo==secNum || realnumtwo==thirdNum) {
-				//counts=1;
-			//}
-			//if (realnumone == firstNum || realnumone== secNum|| realnumone == thirdNum) {
-				//counted=1;
-			//}
+			
 			if (guess==4) {
 				System.out.println("you have one more guess remaining!! Use it wisely. ");
 			}
 			int sum = count+counts+counted+doublecount;
-			//int sum= num+nums+numed;
-			//System.out.println(sum);
+			
 			guess++;
 			
 			
 			System.out.println("you have "+sumed+" correct positions and "+sum+" correct numbers");
 			if (sum==3 && sumed==3 ) {
-				
+				guess--;
 				System.out.println("you have solved the puzzle in "+guess+" guesses");
 				guess=1;
 				System.out.println("Would you like to play again? 1 for yes and no for 0 ");
